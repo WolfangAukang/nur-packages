@@ -7,6 +7,10 @@ let
     url = "https://s3-eu-west-1.amazonaws.com/stremio-artifacts/four/v${version}/server.js";
     sha256 = "sha256:0av15k15lbl2m50f2kg42bmi8xc8as7h1yb33i806bhv47fq71v1";
   };
+  stremioIcon = fetchurl {
+    url = "https://www.stremio.com/website/stremio-logo-small.png";
+    sha256 = "15zs8h7f8fsdkpxiqhx7wfw4aadw4a7y190v7kvay0yagsq239l6";
+  };
 in qt5.mkDerivation rec {
   name = "stremio";
   inherit version;
@@ -39,10 +43,7 @@ in qt5.mkDerivation rec {
   desktopItem = makeDesktopItem {
     inherit name;
     exec = "stremio";
-    icon = builtins.fetchurl {
-      url = "https://www.stremio.com/website/stremio-logo-small.png";
-      sha256 = "15zs8h7f8fsdkpxiqhx7wfw4aadw4a7y190v7kvay0yagsq239l6";
-    };
+    icon = stremioIcon;
     comment = meta.description;
     desktopName = "Stremio";
     genericName = "Movies and TV Series";
@@ -67,7 +68,7 @@ in qt5.mkDerivation rec {
 
   meta = with lib; {
     description = "The Next Generation Media Center";
-    homepage = ""https://github.com/Stremio/stremio-shell;
+    homepage = "https://github.com/Stremio/stremio-shell";
     license = licenses.gpl3;
     platforms = [ "x86_64-linux" ];
   };
