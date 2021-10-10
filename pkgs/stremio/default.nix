@@ -1,4 +1,4 @@
-{ lib, fetchurl, fetchFromGitHub, makeDesktopItem,
+{ lib, fetchurl, fetchFromGitHub, makeDesktopItem, copyDesktopItems,
   cmake, ffmpeg, librsvg, mpv, nodejs, openssl, qt5, which }:
 
 let
@@ -23,7 +23,7 @@ in qt5.mkDerivation rec {
     fetchSubmodules = true;
   };
 
-  nativeBuildInputs = [ which cmake ];
+  nativeBuildInputs = [ which cmake copyDesktopItems ];
   buildInputs = [
     ffmpeg
     mpv
@@ -40,7 +40,7 @@ in qt5.mkDerivation rec {
     librsvg
   ];
 
-  desktopItem = makeDesktopItem {
+  desktopItems = makeDesktopItem {
     name = pname;
     exec = "stremio";
     icon = stremioIcon;
@@ -54,7 +54,6 @@ in qt5.mkDerivation rec {
   preFixup = ''
     mkdir -p $out/bin
     mkdir -p $out/opt/stremio
-    mkdir -p $out/share/applications
     cp stremio $out/opt/stremio/
     cp ${serverJS} $out/opt/stremio/server.js
     ln -s "$(which node)" "$out/opt/stremio/node"
@@ -63,11 +62,10 @@ in qt5.mkDerivation rec {
 
   postFixup = ''
     wrapQtApp "$out/opt/stremio/stremio" --prefix PATH : "$out/opt/stremio"
-    cp ${desktopItem}/share/applications/* "$out/share/applications/"
   '';
 
   meta = with lib; {
-    description = "Modern media center that gives you the freedom to watch everything you want.";
+    description = "Modern media center that gives you the freedom to watch everything you want";
     homepage = "https://github.com/Stremio/stremio-shell";
     license = licenses.gpl3;
     platforms = [ "x86_64-linux" ];
