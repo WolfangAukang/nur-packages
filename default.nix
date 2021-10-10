@@ -19,5 +19,6 @@
   stremio = pkgs.callPackage ./pkgs/stremio { };
   tutanota-desktop = pkgs.callPackage ./pkgs/tutanota-desktop { };
   upwork = pkgs.callPackage ./pkgs/upwork { };
+  vdhcoapp = pkgs.callPackage ./pkgs/vdhcoapp { };
 
 }
