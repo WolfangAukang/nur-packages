@@ -18,5 +18,6 @@
   ssm-session-manager-plugin = pkgs.callPackage ./pkgs/ssm-session-manager-plugin { };
   stremio = pkgs.callPackage ./pkgs/stremio { };
   tutanota-desktop = pkgs.callPackage ./pkgs/tutanota-desktop { };
+  upwork = pkgs.callPackage ./pkgs/upwork { };
 
 }
