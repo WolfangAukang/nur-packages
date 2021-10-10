@@ -14,7 +14,8 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
+  signumone-ks = pkgs.callPackage ./pkgs/signumone-ks { };
+  ssm-session-manager-plugin = pkgs.callPackage ./pkgs/ssm-session-manager-plugin { };
   stremio = pkgs.callPackage ./pkgs/stremio { };
-  signumone-ks = pkgs.callPackage ./pkgs/signumone-ks{ };
 
 }
