@@ -12,7 +12,7 @@ let
     sha256 = "15zs8h7f8fsdkpxiqhx7wfw4aadw4a7y190v7kvay0yagsq239l6";
   };
 in qt5.mkDerivation rec {
-  name = "stremio";
+  pname = "stremio";
   inherit version;
 
   src = fetchFromGitHub {
@@ -41,7 +41,7 @@ in qt5.mkDerivation rec {
   ];
 
   desktopItem = makeDesktopItem {
-    inherit name;
+    name = pname;
     exec = "stremio";
     icon = stremioIcon;
     comment = meta.description;
@@ -67,7 +67,7 @@ in qt5.mkDerivation rec {
   '';
 
   meta = with lib; {
-    description = "The Next Generation Media Center";
+    description = "Modern media center that gives you the freedom to watch everything you want.";
     homepage = "https://github.com/Stremio/stremio-shell";
     license = licenses.gpl3;
     platforms = [ "x86_64-linux" ];
