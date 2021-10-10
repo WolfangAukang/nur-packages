@@ -15,5 +15,6 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   stremio = pkgs.callPackage ./pkgs/stremio { };
+  signumone-ks = pkgs.callPackage ./pkgs/signumone-ks{ };
 
 }
