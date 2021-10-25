@@ -22,6 +22,7 @@
   signumone-ks = pkgs.callPackage ./pkgs/signumone-ks { };
   ssm-session-manager-plugin = pkgs.callPackage ./pkgs/ssm-session-manager-plugin { };
   stremio = pkgs.callPackage ./pkgs/stremio { };
+  thedesk = pkgs.callPackage ./pkgs/thedesk { };
   thiefmd = pkgs.callPackage ./pkgs/thiefmd { };
   tutanota-desktop = pkgs.callPackage ./pkgs/tutanota-desktop { };
   upwork = pkgs.callPackage ./pkgs/upwork { };
