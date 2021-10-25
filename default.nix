@@ -15,6 +15,7 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   binance = pkgs.callPackage ./pkgs/binance { };
+  freezer = pkgs.callPackage ./pkgs/freezer { };
   signumone-ks = pkgs.callPackage ./pkgs/signumone-ks { };
   ssm-session-manager-plugin = pkgs.callPackage ./pkgs/ssm-session-manager-plugin { };
   stremio = pkgs.callPackage ./pkgs/stremio { };
