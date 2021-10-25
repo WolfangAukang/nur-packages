@@ -36,7 +36,6 @@ stdenv.mkDerivation rec {
 
   postFixup = ''
     substituteInPlace $out/share/applications/morgen.desktop --replace '/opt/Morgen' $out/bin
-    cat $out/share/applications/morgen.desktop
 
     makeWrapper ${electron}/bin/electron \
       $out/bin/morgen \
