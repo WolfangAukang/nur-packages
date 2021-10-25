@@ -15,6 +15,7 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   binance = pkgs.callPackage ./pkgs/binance { };
+  buttercup-desktop = pkgs.callPackage ./pkgs/buttercup-desktop { };
   freezer = pkgs.callPackage ./pkgs/freezer { };
   morgen = pkgs.callPackage ./pkgs/morgen { };
   pocket-casts = pkgs.callPackage ./pkgs/pocket-casts { };
