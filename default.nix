@@ -26,5 +26,6 @@
   tutanota-desktop = pkgs.callPackage ./pkgs/tutanota-desktop { };
   upwork = pkgs.callPackage ./pkgs/upwork { };
   vdhcoapp = pkgs.callPackage ./pkgs/vdhcoapp { };
+  whalebird = pkgs.callPackage ./pkgs/whalebird { };
 
 }
