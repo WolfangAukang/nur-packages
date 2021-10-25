@@ -16,6 +16,7 @@
 
   binance = pkgs.callPackage ./pkgs/binance { };
   freezer = pkgs.callPackage ./pkgs/freezer { };
+  morgen = pkgs.callPackage ./pkgs/morgen { };
   pocket-casts = pkgs.callPackage ./pkgs/pocket-casts { };
   signumone-ks = pkgs.callPackage ./pkgs/signumone-ks { };
   ssm-session-manager-plugin = pkgs.callPackage ./pkgs/ssm-session-manager-plugin { };
