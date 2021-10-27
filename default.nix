@@ -17,6 +17,7 @@
   binance = pkgs.callPackage ./pkgs/binance { };
   buttercup-desktop = pkgs.callPackage ./pkgs/buttercup-desktop { };
   freezer = pkgs.callPackage ./pkgs/freezer { };
+  librewolf = pkgs.callPackage ./pkgs/librewolf { };
   morgen = pkgs.callPackage ./pkgs/morgen { };
   pocket-casts = pkgs.callPackage ./pkgs/pocket-casts { };
   signumone-ks = pkgs.callPackage ./pkgs/signumone-ks { };
