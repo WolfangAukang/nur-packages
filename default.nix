@@ -25,6 +25,7 @@
   stremio = pkgs.callPackage ./pkgs/stremio { };
   thedesk = pkgs.callPackage ./pkgs/thedesk { };
   thiefmd = pkgs.callPackage ./pkgs/thiefmd { };
+  threema-desktop = pkgs.callPackage ./pkgs/threema-desktop { };
   tutanota-desktop = pkgs.callPackage ./pkgs/tutanota-desktop { };
   upwork = pkgs.callPackage ./pkgs/upwork { };
   vdhcoapp = pkgs.callPackage ./pkgs/vdhcoapp { };
