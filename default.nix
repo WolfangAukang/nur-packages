@@ -18,6 +18,7 @@
   buttercup-desktop = pkgs.callPackage ./pkgs/buttercup-desktop { };
   freezer = pkgs.callPackage ./pkgs/freezer { };
   librewolf = pkgs.callPackage ./pkgs/librewolf { };
+  markmind = pkgs.callPackage ./pkgs/markmind { };
   morgen = pkgs.callPackage ./pkgs/morgen { };
   pocket-casts = pkgs.callPackage ./pkgs/pocket-casts { };
   signumone-ks = pkgs.callPackage ./pkgs/signumone-ks { };
