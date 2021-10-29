@@ -35,7 +35,7 @@ stdenv.mkDerivation rec {
     mv usr $out
     mv opt $out
 
-    substituteInPlace $out/share/applications/freezer.desktop --replace '/opt/Freezer' Exec=$out/bin
+    substituteInPlace $out/share/applications/freezer.desktop --replace '/opt/Freezer' $out/bin
     makeWrapper ${electron}/bin/electron \
       $out/bin/freezer \
       --add-flags $out/opt/Freezer/resources/app.asar \
