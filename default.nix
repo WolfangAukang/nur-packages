@@ -14,21 +14,10 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  binance = pkgs.callPackage ./pkgs/binance { };
-  buttercup-desktop = pkgs.callPackage ./pkgs/buttercup-desktop { };
-  #freezer = pkgs.callPackage ./pkgs/freezer { };
   librewolf = pkgs.callPackage ./pkgs/librewolf { };
-  morgen = pkgs.callPackage ./pkgs/morgen { };
-  pocket-casts = pkgs.callPackage ./pkgs/pocket-casts { };
-  signumone-ks = pkgs.callPackage ./pkgs/signumone-ks { };
   ssm-session-manager-plugin = pkgs.callPackage ./pkgs/ssm-session-manager-plugin { };
   stremio = pkgs.callPackage ./pkgs/stremio { };
-  thedesk = pkgs.callPackage ./pkgs/thedesk { };
-  thiefmd = pkgs.callPackage ./pkgs/thiefmd { };
-  threema-desktop = pkgs.callPackage ./pkgs/threema-desktop { };
-  tutanota-desktop = pkgs.callPackage ./pkgs/tutanota-desktop { };
-  upwork = pkgs.callPackage ./pkgs/upwork { };
   vdhcoapp = pkgs.callPackage ./pkgs/vdhcoapp { };
-  whalebird = pkgs.callPackage ./pkgs/whalebird { };
-
+  # DEPRECATED
+  #freezer = pkgs.callPackage ./pkgs/freezer { };
 }
