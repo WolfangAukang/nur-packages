@@ -25,6 +25,4 @@
                then pkgs.ffmpeg-full
                else pkgs.ffmpeg-full.override { libmfx = null; };
   };
-  # DEPRECATED
-  #freezer = pkgs.callPackage ./pkgs/freezer { };
 }
