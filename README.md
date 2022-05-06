@@ -1,4 +1,6 @@
-# nur-packages-template
+# DEPRECATED: nur-packages-template
+
+New one is [here](https://codeberg.org/wolfangaukang/nix-agordoj). This repo will be archived for a while in case of any issues, but do not expect it to stay.
 
 **A template for [NUR](https://github.com/nix-community/NUR) repositories**
 
